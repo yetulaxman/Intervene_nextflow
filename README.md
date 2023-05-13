@@ -1,4 +1,4 @@
-# Intervene_nextflow
+# INTERVENE training on Nextflow and Containers
 
 
 Programme:
