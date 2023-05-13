@@ -7,7 +7,7 @@ Programme:
    - [1.Hello-world example](https://yetulaxman.github.io/containers-workflows/hands-on/day4/hello-world-nextflow.html)
    - [2.FastQC example](https://yetulaxman.github.io/containers-workflows/hands-on/day4/fastqc_nextflow.html)
 - Biocontainers
-   - [letcure](./Biocontainers.pdf)
+   - [Letcure](./Biocontainers.pdf)
    - [1.BLAST example](https://yetulaxman.github.io/containers-workflows/hands-on/day2/blast.html)
    - [2.WGS analysis with DeepVariant container](https://yetulaxman.github.io/containers-workflows/hands-on/day2/deepvariant.html)
 - Nextflow with containers in HPC systems
