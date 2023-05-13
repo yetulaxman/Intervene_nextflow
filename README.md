@@ -3,14 +3,15 @@
 
 Programme:
 - Introduction to Nextflow
-   - [Lecture](./ntroduction_workflows.pdf)
-   - Exercise
-- Introduction to conatainers
-   - [letcure](https://a3s.fi/containers-workflows/bioapplications.html)
-   - Exercise
+   - [Lecture](./Introduction_workflows.pdf)
+   - 1.[Demo/Hands-on](https://yetulaxman.github.io/containers-workflows/hands-on/day4/hello-world-nextflow.html)
+   - 2.[Demo/Hands-on](https://yetulaxman.github.io/containers-workflows/hands-on/day4/fastqc_nextflow.html)
+- Biocontainers
+   - [letcure](./Biocontainers.pdf)
+   - 1.[Demo/Hands-on](https://yetulaxman.github.io/containers-workflows/hands-on/day2/blast.html)
+   - 2.[Demo/Hands-on](https://yetulaxman.github.io/containers-workflows/hands-on/day2/deepvariant.html)
 - Nextflow with containers in HPC systems
-   - Lecture
-   - Exercise
-- Running nf-core pipelies on SD desktop
-  - Lecture
-  - Exercise
+   - [Lecture](./Nextflow_singularity_containers.pdf)
+   - 1.[Demo/Hands-on](https://yetulaxman.github.io/containers-workflows/hands-on/day4/nf-core.html)
+   - 2.[Demo/Hands-on](https://yetulaxman.github.io/containers-workflows/hands-on/day4/nf-core-hyperqueue.html)
+
