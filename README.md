@@ -3,7 +3,7 @@
 
 Programme:
 - Introduction to Nextflow
-   - Lecture
+   - [Lecture](./ntroduction_workflows.pdf)
    - Exercise
 - Introduction to conatainers
    - [letcure](https://a3s.fi/containers-workflows/bioapplications.html)
