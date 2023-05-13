@@ -1,4 +1,4 @@
-# INTERVENE training on Nextflow and Containers
+# INTERVENE Training on Nextflow and Containers
 
 
 Programme:
