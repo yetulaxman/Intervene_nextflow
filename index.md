@@ -13,7 +13,7 @@ author: CSC Training
 ## Tutorials and exercises
 {% for hands-on in items %}
 {% if hands-on.topic == 'nextflow' %}
-[{{ hands-on.title }}]({{ hands-on.url | relative_url }})
+## [{{ hands-on.title }}]({{ hands-on.url | relative_url }})
 {% endif %}
 {% endfor %}
 
