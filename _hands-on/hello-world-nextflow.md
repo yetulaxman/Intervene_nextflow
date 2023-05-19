@@ -1,6 +1,6 @@
 ---
 topic: nextflow
-title: Tutorial1 - Hello-world example
+title: Tutorial1 - Hello-world Nextflow
 ---
 
 # Nextflow on Puhti Supercomputer
