@@ -8,19 +8,20 @@ author: CSC Training
 {% assign items = site.hands-on |  sort: "title" %}
 
 
-## 3. Running Singularity on HPC Environment 
-### 3.1 [Slides: Converting docker images to singularity images](https://a3s.fi/containers-workflows/docker2singularity.html)
-### 3.2 [Slides: Building singularity container images](https://a3s.fi/containers-workflows/Building_Singularity_Containers.html)
-### 3.3 Tutorials and exercises
+## [Introduction to Nextflow]
+### 3.[Introduction to Nextflow](https://a3s.fi/CSC_training/Introduction_workflows.pdf)
+### 3.[Hello-world example](https://yetulaxman.github.io/containers-workflows/hands-on/day4/hello-world-nextflow.html)
+### 3.FastQC example] (https://yetulaxman.github.io/containers-workflows/hands-on/day4/fastqc_nextflow.html)
+### 4. [Biocontainers](Biocontainers.pdf](https://a3s.fi/CSC_training/Biocontainers.pdf)
 {% for hands-on in items %}
 {% if hands-on.topic == 'singularity' %}
 1. [{{ hands-on.title }}]({{ hands-on.url | relative_url }})
 {% endif %}
 {% endfor %}
 
-## 4. Nextflow on HPC 
-### 4.1 [Slides: Introduction to workflows with nextflow](https://a3s.fi/containers-workflows/Intro_workflows.pdf)
-### 4.2 [Slides: Workflows with singularity containers](https://a3s.fi/containers-workflows/workflow_singularity_containers.pdf)
+### 4.1 [Nextflow with containers](Nextflow_singularity_containers.pdf](https://a3s.fi/CSC_training/Workflows_singularity_containers.pdf)
+### 4.2 [Nextflow with containers](https://a3s.fi/CSC_training/Workflows_singularity_containers.pdf)
+### [Run nf-core pipeline with hyperqueue executor](https://yetulaxman.github.io/containers-workflows/hands-on/day4/nf-core-hyperqueue.html)
 ### 4.3 Tutorials and exercises
 {% for hands-on in items %}
 {% if hands-on.topic == 'nextflow' %}
