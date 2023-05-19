@@ -17,7 +17,7 @@ author: CSC Training
 {% endif %}
 {% endfor %}
 
-## Lecture-2: 
+## Lecture-2 
 ##[Biocontainers](https://a3s.fi/CSC_training/Biocontainers.pdf)
 ## Tutorials and exercises
 {% for hands-on in items %}
@@ -26,7 +26,7 @@ author: CSC Training
 {% endif %}
 {% endfor %}
 
-## Lecture-3: 
+## Lecture-3 
 ## [Nextflow with containers](https://a3s.fi/CSC_training/Workflows_singularity_containers.pdf)
 ## Tutorials and exercises
 
