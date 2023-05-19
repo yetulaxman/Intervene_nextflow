@@ -1,4 +1,4 @@
-# INTERVENE Training on Nextflow and Containers
+# INTERVENE Training on Nextflow and Containers (WIP)
 
 
 Programme:
