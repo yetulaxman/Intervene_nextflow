@@ -8,7 +8,7 @@ author: CSC Training
 {% assign items = site.hands-on |  sort: "title" %}
 
 
-## Lecture-1: 
+## 1. Lecture 
 ## [Introduction to Nextflow](https://a3s.fi/CSC_training/Introduction_workflows.pdf)
 {% for hands-on in items %}
 {% if hands-on.topic == 'nextflow' %}
@@ -16,7 +16,7 @@ author: CSC Training
 {% endif %}
 {% endfor %}
 
-## Lecture-2 
+## 2. Lecture
 ##[Biocontainers](https://a3s.fi/CSC_training/Biocontainers.pdf)
 {% for hands-on in items %}
 {% if hands-on.topic == 'bioapplications' %}
@@ -24,7 +24,7 @@ author: CSC Training
 {% endif %}
 {% endfor %}
 
-## Lecture-3 
+## 3. Lecture 
 ## [Nextflow with containers](https://a3s.fi/CSC_training/Workflows_singularity_containers.pdf)
 
 {% for hands-on in items %}
