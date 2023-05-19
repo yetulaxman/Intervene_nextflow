@@ -8,11 +8,13 @@ author: CSC Training
 {% assign items = site.hands-on |  sort: "title" %}
 
 
-## Introduction to Nextflow
-### [Lecture](https://a3s.fi/CSC_training/Introduction_workflows.pdf)
-### Tutorial:[Hello-world example](https://yetulaxman.github.io/containers-workflows/hands-on/day4/hello-world-nextflow.html) and [FastQC example](https://yetulaxman.github.io/containers-workflows/hands-on/day4/fastqc_nextflow.html)
-## [Biocontainers](
-### [Lecture](https://a3s.fi/CSC_training/Biocontainers.pdf)
+## 1. Lecture
+### [Introduction to Nextflow](https://a3s.fi/CSC_training/Introduction_workflows.pdf)
+## 1. Tutorials
+### [Hello-world example](https://yetulaxman.github.io/containers-workflows/hands-on/day4/hello-world-nextflow.html) 
+### [FastQC example](https://yetulaxman.github.io/containers-workflows/hands-on/day4/fastqc_nextflow.html)
+## 2. Lecture
+### [Biocontainers](https://a3s.fi/CSC_training/Biocontainers.pdf)
 {% for hands-on in items %}
 {% if hands-on.topic == 'singularity' %}
 1. [{{ hands-on.title }}]({{ hands-on.url | relative_url }})
