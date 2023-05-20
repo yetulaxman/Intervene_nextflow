@@ -3,8 +3,6 @@ title: Training materials for Nextflow and containers
 author: CSC Training
 ---
 
-# Training materials for _Nextflow and containers_ (WIP)
-
 {% assign items = site.hands-on |  sort: "title" %}
 
 
