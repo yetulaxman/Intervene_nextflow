@@ -13,7 +13,7 @@ author: CSC Training
 {% endif %}
 {% endfor %}
 
-## 2. Session: [Primer on using containers in HPC environemnt](https://a3s.fi/CSC_training/Biocontainers.pdf)
+## 2. Session: [Primer on using containers in HPC environment](https://a3s.fi/CSC_training/Biocontainers.pdf)
 {% for hands-on in items %}
 {% if hands-on.topic == 'bioapplications' %}
 ## [{{ hands-on.title }}]({{ hands-on.url | relative_url }})
