@@ -1,5 +1,5 @@
 ---
-title: Containers and Workflows in Bioinformatics
+title: Training materials for Nextflow and containers 
 author: CSC Training
 ---
 
