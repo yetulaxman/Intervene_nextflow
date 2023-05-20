@@ -3,7 +3,7 @@ title: Containers and Workflows in Bioinformatics
 author: CSC Training
 ---
 
-# Training materials for _Nextflow and containers_ 
+# Training materials for _Nextflow and containers_ (WIP)
 
 {% assign items = site.hands-on |  sort: "title" %}
 
