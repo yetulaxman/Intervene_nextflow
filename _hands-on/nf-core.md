@@ -5,6 +5,20 @@ title: Tutorial1 - nf-core pipeline
 
 nf-core is a community effort to collect a curated set of analysis pipelines built using Nextflow. Here we use [Sarek workflow](https://github.com/nf-core/sarek) as an example pipeline to detect variants on whole genome or targeted sequencing data. 
 
+
+In this tutorial, we will use Puhti supercomputer. First login to Puhti using SSH (or by opening a login node shell in the [Puhti web interface](https://www.puhti.csc.fi)):
+  
+```bash
+ssh <username>@puhti.csc.fi    # replace <username> with your CSC username, e.g. myname@puhti.csc.fi
+```
+And go to scratch directory to submit nextflow job:
+
+```bash
+mkdir -p /scratch/<project>/$USER/    # replace <project> with your CSC project, e.g. project_2001234
+cd /scratch/<project>/$USER/  && mkdir -p nf-core && cd nf-core
+
+```
+
 Here is an example batch script to run the pipeline on Puhti:
 ```bash
 #!/bin/bash
