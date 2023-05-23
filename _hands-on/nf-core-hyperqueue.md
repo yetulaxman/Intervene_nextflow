@@ -20,7 +20,7 @@ Here is an example batch script to run the pipeline on Puhti:
 module load nextflow/22.10.1
 module load hyperqueue
 
-# To avoid disck space errors on home directory, use current working or other writable directory  
+# To avoid disk space errors on home directory, use current working or other writable directory as chache/tmpdir for container images are created. 
 export APPTAINER_TMPDIR=$PWD      
 export APPTAINER_CACHEDIR=$PWD
 
