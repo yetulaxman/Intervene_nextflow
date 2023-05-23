@@ -33,8 +33,8 @@ Upon completion of this tutorial you will learn to:
    Unsetting XDG_RUNTIME_DIR will silence some unnecessary warnings. We will learn more about these settings later in the course.
 
    ```bash
-    export APPTAINER_TMPDIR=$LOCAL_SCRATCH
-    export APPTAINER_CACHEDIR=$LOCAL_SCRATCH
+    export APPTAINERENV_TMPDIR=$LOCAL_SCRATCH
+    export APPTAINERENV_CACHEDIR=$LOCAL_SCRATCH
     unset XDG_RUNTIME_DIR
     apptainer build deepvariant_cpu_1.2.0.sif docker://google/deepvariant:1.2.0
    ```
