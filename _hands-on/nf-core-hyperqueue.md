@@ -3,7 +3,7 @@ topic: nextflow_container
 title: Tutorial2 - Run nf-core pipeline with hyperqueue executor
 ---
 
-nf-core is a community effort to collect a curated set of analysis pipelines built using Nextflow. Here we use [Sarek workflow](https://github.com/nf-core/sarek) as an example pipeline to detect variants on whole genome or targeted sequencing data.  In this tutorial we use HyperQueue executor instead of 'local' or 'slurm' executor.
+nf-core is a community effort to collect a curated set of analysis pipelines built using Nextflow. Here we use [Sarek workflow](https://github.com/nf-core/sarek) as an example pipeline to detect variants on whole genome or targeted sequencing data.  In this tutorial we use HyperQueue executor instead of 'local' or 'slurm' executor. HyperQueue executor is useful for running nextflow in high-throughput manner and will not cause lot of overhead on batch scheduler accounting DB.
 
 
 Here is an example batch script to run the pipeline on Puhti:
@@ -20,11 +20,22 @@ Here is an example batch script to run the pipeline on Puhti:
 module load nextflow/22.10.1
 module load hyperqueue
 
+# To avoid disck space errors on home directory, use current working or other writable directory  
+export APPTAINER_TMPDIR=$PWD      
+export APPTAINER_CACHEDIR=$PWD
+
 # Create a per job directory
 
 export HQ_SERVER_DIR=$PWD/.hq-server-$SLURM_JOB_ID
 mkdir -p $HQ_SERVER_DIR
 
+# create a config file for nextflow to tell that this workflow uses hyperqueue executor
+echo "executor {
+   queueSize = $(( 40*SLURM_NNODES ))   
+   name = 'hq'
+  cpus = $(( 40*SLURM_NNODES )) 
+ }" >>  hq.config
+ 
 hq server start &
 srun --cpu-bind=none --hint=nomultithread --mpi=none -N $SLURM_NNODES -n $SLURM_NNODES -c 40 hq worker start --cpus=40 &
 
@@ -42,7 +53,7 @@ while true; do
 
 done
 
-nextflow run nf-core/sarek -r 3.1.1 -profile test,singularity -resume
+nextflow run -c hq.config nf-core/sarek -r 3.1.1 -profile test,singularity -resume
 
 # Make sure we exit cleanly once nextflow is done
 hq worker stop all
@@ -52,18 +63,7 @@ hq server stop
 
 copy and paste the above script to a file named sarek_nfcore-hq.sh and replace your project number with project_xxxx in slurm directives.
 
-> Note: In order to use hyperqueue executor for nextflow; use the latest version of Nextflow and add the following script :
-
-```bash
-echo "executor {
-   queueSize = $(( 40*SLURM_NNODES ))   
-   name = 'hq'
-  cpus = $(( 40*SLURM_NNODES )) 
- }" >>  ~/.nextflow/assets/nf-core/sarek/conf/test/test.config 
-
-```
-
-Please note that all the nextflow scripts from underlying GitHub repository are cloned to "~/.nextflow/assets/" when launching pipelines with specific version (``` nextflow run nf-core/sarek -r 3.1.1 ... ```).  Replace SLURM_NNODES with exact number of nodes as Nextflow may not detected the value of variable "SLURM_NNODES". 
+Please note that all the nextflow scripts from underlying GitHub repository are cloned to "~/.nextflow/assets/" when launching pipelines with specific version (``` nextflow run nf-core/sarek -r 3.1.1 ... ```).  
 
 Finally, submit your job
 
