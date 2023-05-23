@@ -9,7 +9,7 @@ nf-core is a community effort to collect a curated set of analysis pipelines bui
 Here is an example batch script to run the pipeline on Puhti:
 ```bash
 #!/bin/bash
-#SBATCH --job-name=MetaPhage_Demo
+#SBATCH --job-name=sarek_demo
 #SBATCH --account=project_xxxx
 #SBATCH --time=02:00:00
 #SBATCH --nodes=2
