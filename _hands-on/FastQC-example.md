@@ -75,7 +75,7 @@ split         merge         view
 filter        map/reduce    group
 ```
 
-What would be the output of the following nextflow script with value channels?
+What would be the output of the following nextflow script with value channels? (**tip** : copy and paste the following script to a file and run it as `nextflow run filename`)
 ```bash
 #!/usr/bin/env nextflow
 // Examples with value channels where data is non-consumable
