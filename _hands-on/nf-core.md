@@ -34,7 +34,7 @@ export SINGULARITY_CACHEDIR=$PWD
 unset XDG_RUNTIME_DIR
 
 # Activate  Nextflow on Puhti
-nextflow/22.10.1 
+module load nextflow/22.10.1 
 
 # nf-core pipeline examples here
 # Variant calling on genome data
