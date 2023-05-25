@@ -38,7 +38,7 @@ module load nextflow/22.10.1
 
 # nf-core pipeline examples here
 # Variant calling on genome data
-nextflow run nf-core/sarek -r 2.7.1 -profile test,singularity -resume
+nextflow run nf-core/sarek -r 3.1.1 -profile test,singularity -resume
 # proteomics example
 # nextflow run nf-core/proteomicslfq  -r 1.0.0  -profile test,singularity -resume
 # metabolomics example
@@ -51,3 +51,13 @@ Finally, submit your job
 ```bash
 sbatch sarek_nfcore.sh
 ```
+You can check of the status of your pipeline with the following command:
+
+```
+squeue -u $USER
+```
+
+Think of the following aspects of pipeline:
+1. Where are the actual codes  (local path) of nextflow pipeline located ? (*tip*: check slurm output file for more details or use *nextflow info nf-core/sarek*)
+2. What kind of nextflow *profiles* are used in the above batch script? Also find out the details of how those profiles are described in the configuration file?
+3. Find out the different commandline options associated with sarek pipeline ?(*hint*: use the following command: nextflow run nf-core/sarek -r 3.1.1 --help)
