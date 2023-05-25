@@ -20,7 +20,7 @@ author: CSC Training
 {% endif %}
 {% endfor %}
 
-## 3. Session: [Nextflow with Síngularity containers](https://a3s.fi/CSC_training/Workflows_singularity_containers.pdf)
+## 3. Session: [Nextflow with Singularity containers](https://a3s.fi/CSC_training/Workflows_singularity_containers.pdf)
 
 {% for hands-on in items %}
 {% if hands-on.topic == 'nextflow_container' %}
