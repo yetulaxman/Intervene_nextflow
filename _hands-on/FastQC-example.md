@@ -7,9 +7,10 @@ title: Tutorial2 - FastQC Analysis
 In this example,  let's use some real-world example that involves working with samples from sequencing experiments. We specifically learn:
 - Declaring (and overriding default) pipeline parameters
 - Moving results from analysis to a convenient folder
-- Basic Nextflow channels and operators (few examples)
 
-`fastqc_demo` folder has the necessary files for running this tutorial. You can run Nextflow script for *fastqc* analysis on your interactive terminal by issuing the following command:
+And also improve your understanding of Channels towards the end of FastQC tutorials (Optional)
+
+This tutorial needs `fastqc_demo` folder which is part of the tar file you had downloaded in hello-world tutorial (Tutorial 1) and you can use the same interactive terminal on Puhti.  You can run Nextflow script for *fastqc* analysis on your interactive terminal as below:
 
 ```nextflow
 cd fastqc_demo
